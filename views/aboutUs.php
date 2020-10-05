@@ -13,6 +13,26 @@
         <input type="reset" value="reset" name="reset">
         <input type="submit" value="submit" name="submit">
 
+        <br><br>
+        <table border="1">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>userName</th>
+            </tr>
+            <?php
+            foreach($controllerData as $row){
+                echo("
+                    <tr>
+                        <td>$row[Name]</td>
+                        <td>$row[userName]</td>
+                        <td>$row[password]</td>
+                    </tr>
+                ");
+            }
+
+        ?>
+        </table>
     </form>
 </body>
 </html>

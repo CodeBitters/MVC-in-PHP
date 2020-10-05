@@ -5,16 +5,15 @@
         }
 
         public static function checkLogin(){
-            self::createView('aboutUs');
+            $readData=About_Us::getData();
+            self::createView('aboutUs',$readData);
             if(isset($_GET['submit'])){
                 $userName=$_GET['userName'];
                 $password=$_GET['password'];
 
                 echo("Username: $userName password: $password ");
-                // $dbData1=About_Us::getData();
-                // print_r($dbData1);
-                $dbData2=About_Us::setData($userName,$password);
-                print_r($dbData2);
+                $executeData=About_Us::setData($userName,$password);
+                print_r($executeData);
             }
         }
     }

@@ -9,9 +9,12 @@
             if(isset($_GET['submit'])){
                 $userName=$_GET['userName'];
                 $password=$_GET['password'];
+
                 echo("Username: $userName password: $password ");
-                $dbData=About_Us::getData();
-                print_r($dbData);
+                // $dbData1=About_Us::getData();
+                // print_r($dbData1);
+                $dbData2=About_Us::setData($userName,$password);
+                print_r($dbData2);
             }
         }
     }

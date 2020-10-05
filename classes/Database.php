@@ -15,11 +15,17 @@
         }
 
         public static function executeQuery($sqlQuery){
-            $result = self::connect()->query($sqlQuery);
-            $data = array();
-            foreach ($result as $row) {
-                $data[] = $row;
+            $connection=self::connect();
+            $result = $connection->query($sqlQuery);
+            if($result !== TRUE){
+                $data = array();
+                foreach ($result as $row) {
+                    $data[] = $row;
+                }
+            }else{
+                $data=TRUE;
             }
+            $connection -> close();
             return ($data);
         }
 }

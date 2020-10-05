@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is aboutUs</h1>
+    <h1>This is about Us</h1>
+    <form action="" method="get">
+        <input type="text" name="userName" id=""><br>
+        <input type="password" name="password" id=""><br>
+        <input type="reset" value="reset" name="reset">
+        <input type="submit" value="submit" name="submit">
+
+    </form>
 </body>
 </html>
